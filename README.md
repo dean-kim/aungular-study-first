@@ -1,6 +1,25 @@
 # Hello
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+이 repo는 Angular 스터디를 위한 repo입니다.
+
+[Angular CLI](https://github.com/angular/angular-cli) version 1.1.1. 을 사용했습니다.
+
+## 설치
+
+Angular CLI를 설치하기 위해서는 node 6.9.0 이상 버전과 npm 3 이상의 버전이 필요합니다.
+`node -v`와 `npm -v`로 버전을 확인하신 후에 설치하시기 바랍니다.
+
+node와 npm의 버전이 요건에 충족된다면 다음의 명령어로 Angular CLI를 설치합니다.
+
+`npm install -g @angular/cli`
+
+설치가 끝나면 `ng version`으로 설치가 잘 되었는지 버전을 확인할 수 있습니다.
+
+## 컴포넌트 추가
+
+터미널에 다음의 명령어로 컴포넌트를 추가할 수 있습니다.
+
+`ng generate component 컴포넌트이름`
 
 ## Development server
 
