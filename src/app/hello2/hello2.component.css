@@ -1,0 +1,21 @@
+.text-small {
+  font-size: 15px;
+}
+.text-large {
+  font-size: 35px;
+}
+.color-blue {
+  color: blue;
+}
+.color-red {
+  color: red;
+}
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}

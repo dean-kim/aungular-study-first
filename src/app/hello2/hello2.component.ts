@@ -22,4 +22,20 @@ export class Hello2Component {
   contents = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
   imageUrl = 'http://lorempixel.com/400/200';
   isDisabled = true;
+
+  isLarge = true;
+  isRed = true;
+  myClasses = 'text-large color-red';
+
+  isActive = false;
+
+  name2 = '';
+  onInput(event) {
+    console.log(event);
+    // event.target.value에는 사용자 입력 텍스트가 담겨있습니다.
+    this.name2 = event.target.value;
+  }
+  onClick() {
+    this.name2 = '';
+  }
 }
