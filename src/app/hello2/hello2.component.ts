@@ -38,4 +38,8 @@ export class Hello2Component {
   onClick() {
     this.name2 = '';
   }
+
+  name3 = '';
+  name4 = '';
+  name5 = '';
 }
