@@ -3,7 +3,7 @@
 
 <p><b>1. 인터폴레이션(Interpolation)</b></p>
 <p>표현식을 두개의 중괄호로 열고 닫은 형식을 인터폴레이션이라 한다. 인터폴레이션은 단방향 바인딩에 사용되는 템플릿 문법으로 표현식의 평가 결과를 문자열로 변환하여 템플릭세 바인딩 한다.</p>
-<p>형식 : '{{ expression }}'</p>
+<!--<p>형식 : `{{ expression }}`</p>-->
 <br>
 <p>name: {{ name }}</p>
 <p>age: {{ age }}</p>
@@ -14,7 +14,7 @@
 <br>
 <p><b>2. 프로퍼티 바인딩(Property binding)</b></p>
 <p>프로퍼티 바인딩은 컴포넌트 클래스의 데이터와 템플릿 간의 단방향 바인딩에 사용되는 템플릿 문법으로 표현식의 평가 결과를 DOM 프로퍼티에 바인딩합니다.</p>
-<p>형식 : '<element [property]="expression">...</element>'</p>
+<!--<p>형식 : `<element [property]="expression">...</element>`</p>-->
 <!-- value 프로퍼티에 컴포넌트 클래스의 name 프로퍼티 바인딩 -->
 <p>value 프로퍼티에 컴포넌트 클래스의 name 프로퍼티 바인딩</p>
 <input type="text" [value]="name1">
@@ -33,7 +33,7 @@
 <br>
 <p><b>3. 어트리뷰트 바인딩</b></p>
 <p>어트리뷰트 바인딩은 컴포넌트 클래스의 데이터와 템플릿 간의 단방향 바인딩에 사용되는 템플릿 문법으로 표현식의 평가 결과를 HTML 어트리뷰트에 바인딩합니다.</p>
-<p>형식 : '<element [attr.attrbute-name]="expression">...</element>'</p>
+<!--<p>형식 : `<element [attr.attrbute-name]="expression">...</element>`</p>-->
 <p>위 프로퍼티 바인딩과 차이점을 이해하기 위해서 HTML 어트리뷰트와 DOM 프로퍼티에 대해서 알아야 합니다.
 어트리뷰트와 프로퍼티는 모두 속성으로 번역되어 같은 것으로 오해할 수 있지만 서로 다른 것입니다.
 바인딩이 동작하는 방식을 이해하기 위해서는 HTML의 어트리뷰트와 프로퍼티의 차이를 아는 것이 중요합니다.
@@ -55,8 +55,8 @@ HTML 어트리뷰트의 값은 언제나 문자열이지만 DOM 프로퍼티는 
 <br>
 <p><b>4. 클래스 바인딩</b></p>
 <p>클래스 바인딩을 사용하면 HTML 클래스 어트리뷰트에 클래스를 추가 또는 삭제할 수 있습니다.</p>
-<p>형식 : "<element [class.class-name]="booleanExpression">...</element>"</p>
-<p>형식 : "<element [class]="class-name-list">...</element>"</p>
+<!--<p>형식 : `<element [class.class-name]="booleanExpression">...</element>`</p>-->
+<!--<p>형식 : `<element [class]="class-name-list">...</element>`</p>-->
 <p>클래스 바인딩은 우변의 표현식을 편가한 후 HTML 어트리뷰트를 변경합니다. HTML class 어트리뷰트에 의해 이미 클래스가 지정되어 있을 때 한 개의 클래스를 대상으로 하는 클래스 바인딩([class.class-name])은 HTML class 어트리뷰트를
 병합(merge)하여 새로운 HTML class 어트리뷰트를 작성합니다. 하지만 복수의 클래스를 대상으로 하는 클래스 바인딩([class])은 기존 HTML class 어트리뷰트를 삭제하고 새로운 HTML class 어트리뷰트를 작성합니다. 사용법은 다음 참고</p>
 <!-- 조건에 의한 클래스 바인딩, 우변의 표현식이 true이면 클래스를 추가합니다. -->
@@ -73,7 +73,7 @@ HTML 어트리뷰트의 값은 언제나 문자열이지만 DOM 프로퍼티는 
 <br>
 <p><b>5. 스타일 바인딩</b></p>
 <p>스타일 바인딩을 사용하면 HTML 요소 스타일 어트리뷰트에 스타일을 지정할 수 있습니다.</p>
-<p>형식 : "<element [style.style-property]="expression">...</element>"</p>
+<!--<p>형식 : `<element [style.style-property]="expression">...</element>`</p>-->
 <p>스타일 바인딩은 우변의 표현식을 평가한 후 HTML style 어트리뷰트를 변경합니다. HTML style 어트리뷰트에 의해 이미 스타일이 지정되어 있을 때
 스타일 바인딩은 중복되지 않은 스타일은 병합(merge)하여 그대로 사용하고 중복된 스타일은 스타일 바인딩의 스타일으로 덮어씁니다.
 스타일 프로퍼티(border-radius 등)는 케밥표기법(kebab-case) 또는 카멜표기법(camelCase)을 사용합니다. 다음을 참고</p>
@@ -86,7 +86,7 @@ HTML 어트리뷰트의 값은 언제나 문자열이지만 DOM 프로퍼티는 
 <p><b>6. 이벤트 바인딩</b></p>
 <p>이벤트 바인딩은 뷰의 상태 변화(버튼 클릭, input에 입력 등)에 의해 이벤트가 발생하면 이벤트 핸들러를 호출하는 것을 말합니다.
 지금까지 살펴본 데이터 바인딩은 컨포넌트 클래스에서 템플릿으로 데이터가 이동하였지만 이벤트 바인딩은 템플릿에서 컴포넌트 클래스로 데이터가 이동합니다.</p>
-<p>형식 : "<element (event)="statement">...</element>"</p>
+<!--<p>형식 : `<element (event)="statement">...</element>`</p>-->
 <p>다음을 참고</p>
 <!-- (1) -->
 <input type="text" [value]="name2" (input)="onInput($event)">
@@ -105,10 +105,10 @@ value 프로퍼티(사용자 입력 텍스트가 담겨 있음)를 $event에서 
 <br>
 <p><b>7. 양방향 데이터 바인딩</b></p>
 <p>양방향 데이터 바인딩은 뷰와 컴포넌트 클래스의 상태 변화를 상호 반영하는 것을 말합니다. 즉 뷰의 상태가 변화하면 컴포넌트 클래스의 상태도 변화하고 그 반대로 컴포넌트 클래스의 상태가 변화하면 뷰의 상태도 변화하는 것입니다.</p>
-<p>형식 : "<element [(ngModel)]="property">...</element>"</p>
+<!--<p>형식 : `<element [(ngModel)]="property">...</element>`</p>-->
 <p>ngModel 디렉티브를 이벤트 바인딩(())과 프로퍼티 바인딩([]) 형식으로 기술한 후 우변에 뷰와 컴포넌트 클래스가 공유할 프로퍼티를 기술합니다. ngModel 디렉티브를 사용하기 위해서는 FormsModule을 모듈에
 등록해야 합니다. Angular CLI를 통해 프로젝트를 생성하였다면 FormsModule이 이미 등록되어 있으므로 별도의 등록이 필요없습니다.</p>
-<input type="text" [(ngModel])="name3">
+<input type="text" [(ngModel)]="name3">
 <p>name3: {{ name3 }}</p>
 <p>컴포넌트 클래스의 name3 프로퍼티는 템플릿의 input 요소와 양방향으로 바인딩되어 있습니다. 즉 input 요소의 value 프로퍼티가 변화하면 컴포넌트 클래스의 name3 프로퍼티도
 동일한 값으로 변화하고 반대로 컴포넌트 클래스의 name3 프로퍼티가 변화하면 input 요소의 value 프로퍼티도 동일한 값으로 변화합니다.</p>
