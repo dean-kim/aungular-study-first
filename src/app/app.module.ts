@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'
+import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { Hello2Component } from './hello2/hello2.component';
+
 
 @NgModule({
   // 모듈에 소속될 구성요소(컴포넌트, 디렉티브, 파이프 리스트
@@ -18,7 +20,13 @@ import { Hello2Component } from './hello2/hello2.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: 'data-binding',
+        component: Hello2Component
+      }
+    ])
   ],
   // 모듈에 소속된 구성요소가 사용할 서비스
   providers: [],
