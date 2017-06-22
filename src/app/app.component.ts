@@ -4,6 +4,7 @@
 // Angular 모듈이 아닌 외부 모듈의 경우 상대 경로를 명시하여야 한다.
 // Component는 Angular core 모듈에 정의되어 있다. import 키워드로 Angular core 모듈을 임포느 한다.
 import { Component } from '@angular/core';
+import { User } from './models/user.model';
 
 // @Component 영역
 // @Component 데코레이터에는 메타데이터 객체가 인자로 전달된다.
@@ -28,4 +29,29 @@ import { Component } from '@angular/core';
 // 컴포넌트 클래스는 컴포넌트의 내부 관심사인 뷰의 관리에 집중해야 하며 애플리케이션 공통 관심사는 서비스로 분리하여야 한다.
 export class AppComponent {
   title = 'angular';
+
+  // 자식 컴포넌트와 공유할 상태 정보
+  users: User[];
+
+  constructor() {
+    this.users = [
+      { id: 1, name: 'Lee',  role: 'Administrator' },
+      { id: 2, name: 'Baek', role: 'Developer' },
+      { id: 3, name: 'Park', role: 'Designer' }
+    ];
+  }
+
+  // user 추가
+  addUser(name: string, role: string): void {
+    if (name && role) {
+      this.users = [...this.users, { id: this.getLastId() + 1, name, role}];
+    }
+  }
+
+  // user의 요소 중 가장 큰 id를 반환
+  getLastId(): number {
+    let lastId = 1;
+    this.users.map(({ id }) => id > lastId ? lastId = id : id);
+    return lastId;
+  }
 }
