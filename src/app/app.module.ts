@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { Hello2Component } from './hello2/hello2.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { Hello2Component } from './hello2/hello2.component';
   declarations: [
     AppComponent,
     HelloComponent,
-    Hello2Component
+    Hello2Component,
+    UserListComponent
   ],
   // 모듈에 소속된 구성요소가 필요로 하는 다른 모듈
   imports: [
@@ -25,6 +27,10 @@ import { Hello2Component } from './hello2/hello2.component';
       {
         path: 'data-binding',
         component: Hello2Component
+      },
+      {
+        path: 'user-list',
+        component: UserListComponent
       }
     ])
   ],
