@@ -24,7 +24,10 @@
           (click)="addUser(name.value, role.value)">Add user
         </button>
       </div>
-      <app-user-list [users]="users"></app-user-list>
+      <app-user-list
+        [users]="users"
+        (remove)="removeUser($event)">
+      </app-user-list>
     </form>
   </div>
 </div>

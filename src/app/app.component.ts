@@ -48,6 +48,11 @@ export class AppComponent {
     }
   }
 
+  // 해당 user를 제거한다.
+  removeUser(user: User) {
+    this.users = this.users.filter(({ id }) => id !== user.id);
+  }
+
   // user의 요소 중 가장 큰 id를 반환
   getLastId(): number {
     let lastId = 1;
